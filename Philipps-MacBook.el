@@ -53,3 +53,6 @@
 ;; Replace Espresso with js-mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
 (autoload 'javascript-mode "javascript" nil t)
+
+;;; Set new lines to be indented automatically
+(define-key global-map (kbd "RET") 'newline-and-indent)
