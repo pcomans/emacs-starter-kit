@@ -29,7 +29,7 @@
                                                      c-mode          c++-mode
                                                      objc-mode       latex-mode
                                                      plain-tex-mode  cuda-mode
-                                                     html-mode
+                                                     html-mode       java-mode
                                                      ))
                 (let ((mark-even-if-inactive transient-mark-mode))
                   (indent-region (region-beginning) (region-end) nil))))))
