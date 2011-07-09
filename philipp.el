@@ -56,3 +56,8 @@
 
 ;;; Set new lines to be indented automatically
 (define-key global-map (kbd "RET") 'newline-and-indent)
+
+;; Quicklisp
+(load (expand-file-name "~/quicklisp/slime-helper.el"))
+;; Replace "sbcl" with the path to your implementation
+(setq inferior-lisp-program "sbcl")
