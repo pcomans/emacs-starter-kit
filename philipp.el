@@ -57,7 +57,13 @@
 ;;; Set new lines to be indented automatically
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
-;; Quicklisp
-(load (expand-file-name "~/quicklisp/slime-helper.el"))
-;; Replace "sbcl" with the path to your implementation
-(setq inferior-lisp-program "sbcl")
+;; RVM mode
+(add-to-list 'load-path "~/.emacs.d/rvm.el/")
+(require 'rvm)
+(rvm-use-default) ;; use rvm’s default ruby for the current Emacs session
+
+(add-to-list 'load-path "~/.emacs.d/darkroom-mode/")
+(require 'darkroom-mode)
+
+;; Custom org install
+(require 'org-install)
