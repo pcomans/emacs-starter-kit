@@ -21,3 +21,5 @@ session*
 tramp
 \#*
 history
+.emacs.d
+.org-id-locations
