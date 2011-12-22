@@ -87,3 +87,12 @@
            (shell-quote-argument (buffer-file-name))))
   )
 (global-set-key "\C-cm" 'markdown-preview-file)
+
+;; Use haskell-indent-mode
+(remove-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+(remove-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+(add-hook 'haskell-mode-hook 'my-haskell-mode-hook)
+(defun my-haskell-mode-hook ()
+  (haskell-indentation-mode -1) ;; turn off, just to be sure
+  (haskell-indent-mode 1))       ;; turn on indent-mode
+                       
