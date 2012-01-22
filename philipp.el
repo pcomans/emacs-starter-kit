@@ -58,11 +58,11 @@
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
 ;; RVM mode
-(add-to-list 'load-path "~/.emacs.d/rvm.el/")
+(add-to-list 'load-path "~/.emacs.d/elisp/rvm.el/")
 (require 'rvm)
 (rvm-use-default) ;; use rvm’s default ruby for the current Emacs session
 
-(add-to-list 'load-path "~/.emacs.d/darkroom-mode/")
+(add-to-list 'load-path "~/.emacs.d/elisp/darkroom-mode/")
 (require 'darkroom-mode)
 
 ;; Custom org install
