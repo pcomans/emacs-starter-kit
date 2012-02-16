@@ -117,4 +117,25 @@
 (defun my-haskell-mode-hook ()
   (haskell-indentation-mode -1) ;; turn off, just to be sure
   (haskell-indent-mode 1))       ;; turn on indent-mode
-                       
+
+(defun unfill-paragraph ()
+  (interactive)
+  (let ((fill-column (point-max)))
+    (fill-paragraph nil)))
+
+(defun unfill-region ()
+  (interactive)
+  (let ((fill-column (point-max)))
+    (fill-region (region-beginning) (region-end) nil)))
+
+(setq org-export-latex-hyperref-format "\\ref{%s}")
+
+(defun set-margins ()
+  (interactive)
+  (set-window-margins (selected-window)
+		      30
+		      30))
+
+
+(load-file "~/.emacs.d/elisp/almost-monokai/color-theme-almost-monokai.el")
+(load-file "~/.emacs.d/elisp/almost-monokai/color-theme-real-monokai.el")
