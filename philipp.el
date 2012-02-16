@@ -1,5 +1,6 @@
 ;; Turn the menu bar on again
 (if (fboundp 'menu-bar-mode) (menu-bar-mode 1))
+;; (if (fboundp 'scroll-bar-mode) (scroll-bar-mode 1))
 
 ;; scroll one line at a time (less "jumpy" than defaults)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
